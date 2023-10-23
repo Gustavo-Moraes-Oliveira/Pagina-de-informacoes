@@ -7,37 +7,43 @@
     <title>Wiki Marvel Snap</title>
 </head>
 <body>
+
+    <!--CORRIGIR GRID-->
+    <!--REFINAR DESIGN DA PAGINA-->
     <!--Inicio da pagina, imagem de header-->
-    <header class="header">
-        <img src="https://cdn.mos.cms.futurecdn.net/zeZmzZArBdkyzKP5dQN5pA.jpg" alt="cabeçalho" class="cabecalho">
+    <header class="header" id="header">
+        <img src="https://cdn.mos.cms.futurecdn.net/zeZmzZArBdkyzKP5dQN5pA.jpg" alt="cabeçalho">
     </header>
     <!--menu de navegaçao-->
     <nav class="menu">
         <ul>
-            <li class="menu-itens"><a href="#regras-dicas">Regras e Dicas</a></li>
-            <li class="menu-itens"><a href="#grid">Imagens</a></li>
-            <li class="menu-itens"><a href="#contatos">Contatos</a></li>
+            <li>
+                <a href="#header">Regras e Dicas
+                </a>
+            </li>
+            <li>
+                <a href="#grid">Imagens
+                </a>
+            </li>
+            <li>
+                <a href="https://www.marvelsnap.com/howtoplay">Como jogar
+                </a>
+            </li>
         </ul>
     </nav>
-    
-    <!--BUSCAR IMAGENS DE LOCAIS,EFEITOS-->
-    <!--GRID -imagens de currencies, spotlight caches, games -->
-    <!--ARRUMAR MENU-->
-    <!--DEFINIR @MEDIA-->
-    <!--ARRUMAR CONTEUDO PRINCIPAL E SECUNDARIO-->
 
     <!--inicio do conteudo da pagina-->
     <main>
         <!--sessao principal-->
-        <section class="regras-dicas" id="regras-dicas">
-            <div class="primario">
+        <div class="regras-dicas" id="regras-dicas">
+            <section class="primario">
                 <h1 class="titulos-maior">
                     O jogo
                 </h1> 
-                <p class="texto-primario">
+                    <p class="texto-primario">
                 Marvel snap é um jogo de cartas online, com foco em dispositivos mobile. Lançado oficialmente em outubro de 2022, o jogo conta com centenas de personagens dos quadrinhos da marvel, além de mecanicas
                 conhecidas de jogos de cartas, como turnos e locais. Em geral, os jogos duram de dois a três minutos.
-                </p>
+                    </p>
                 <h2 class="titulos-primario">
                     Como funciona
                 </h2>
@@ -53,6 +59,11 @@
                     <p class="texto-primario">
                         O jogo possui mais de 100 locais com diferentes efeitos que alteram a gameplay. Essa variância garante uma gameplay ágil e engajante. Exemplos de locais:
                     </p>
+                <section class="images">
+                    <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/asgard.webp?v=133" alt="imagem asgard" class="float-images">
+                    <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/gamma-lab.webp?v=133" alt="imagem do laboratorio gama" class="float-images">
+                    <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/new-york.webp?v=133" alt="imageem de nova york" class="float-images">
+                </section>
                 <h2 class="titulos-primario">
                     Efeitos das cartas
                 </h2> <!--exemplos de efeitos-->
@@ -64,6 +75,11 @@
                         Movimentações: cartas trocam de local no meio do jogo.
                         Destruição: cartas são destruídas para efeitos positivos ou limpeza de espaço.
                     </p>
+                <section class="images">
+                    <img src="images\alioth.png" alt="imagem de alioth" class="cards-images">
+                    <img src="images/capita-marvel.png" alt="imagem de capita marvel" class="cards-images">
+                    <img src="images/magneto.png" alt="imagem de magneto" class="cards-images">
+                </section>
                 <h2 class="titulos-primario">
                     Economia
                 </h2>
@@ -88,7 +104,7 @@
                        O modo principal de jogo é a ranked com jogadores do continente e bots. Há modos alternativos de jogo como conquista e batalha com amigos que são similares.
                        Nestes modos os jogadores tem 10 cubos de vida e seu objetivo é reduzir a vida do adversário a zero, através de várias batalhas, apostando um determinado número de cubos por vez.
                     </p>
-            </div>
+            </section>
             <div class="divisoria"></div>
             <article class="secundario"> <!--sessão secundária de dicas e conceitos um pouco mais avançados-->
                 <h1 class="titulos-maior">
@@ -118,9 +134,13 @@
                             Splits são versões da mesma carta com mudanças cosméticas, cor de fundo e efeito.<!--colocar exemplo básico-->
                             Cada split tem uma chance aleatória de efeito, cor de fundo e cor do efeito.
                             As variantes mais raras são os efeitos preto e branco e fundo dourado. E a borda mais rara é de crackles. Tais efeitos só são possíveis a partir do 4 split, mas não são garantidos.
-                            <!--inserir variantes raras-->
+                            <img src="images/venom gold split.png" alt="venom gold split" class="float-images">
+                            <img src="images/odin ink split.webp" alt="odin ink split" class="float-images">
                             Além dos splits, as cartas base têm variantes de suas artes feitas por diferentes artistas. Estas artes são ganhadas jogando e podem ser compradas por ouro.
                         </p>
+                            <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/2_166025533796.webp?v=133" alt="exemplo de arte de carta" class="cards-images">
+                            <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/4_08.webp?v=133" alt="exemplo de arte de carta" class="cards-images">
+                            <img src="https://marvelsnapzone.com/wp-content/themes/blocksy-child/assets/media/cards/467_03.webp?v=133" alt="exemplo de arte de carta" class="cards-images">
                     <h2 class="titulos-secundario">
                         Snap e cubos
                     </h2>
@@ -132,26 +152,18 @@
                             estratégia de salvamento de cubos essencial.
                         </p>
             </article>
-        </section>
-        <!--sessao de imagens-->
-        <section class="grid" id="grid"><!-- imagens referentes a artes, cartas e locais-->
-            <h1 class="titulos-maior">Galeria de imagens</h1>
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-            <img src="" alt="" class="imagens-grid">
-        </section>
-        <!--sessao de contato-->
-        <div class="contatos" id="contatos">
-            <p>Marvel Snap</p>
-            <p></p>
-            <p></p>
         </div>
+        <!--sessao de imagens-->
+        <section id="grid"><!-- imagens referentes a artes, cartas e locais-->
+            <h1 class="titulos-maior">Galeria de imagens</h1>
+            <div class="grid">
+                <img src="https://cdn.vox-cdn.com/thumbor/zEVyxuPL1313kQCfqD5Y4n3MmyI=/0x0:1920x1200/1200x800/filters:focal(964x452:1270x758)/cdn.vox-cdn.com/uploads/chorus_image/image/71640421/marvel_snap_gameplay_2.0.jpeg" alt="exemplo de tela do jogo" id="item1" class="grid-item">
+                <img src="https://cdn.marvel.com/content/1x/marvel-snap-spider-versus-new-season-article-card.jpg" alt="temporada do homem aranha" id="item2" class="grid-item">
+                <img src="https://nvvprd-static.op.ninja/wp-content/uploads/2023/04/Marvel-Snap-Animals-Assemble.jpg" alt="temporada dos animais" id="item3" class="grid-item">
+                <img src="https://assetsio.reedpopcdn.com/Marvel-Snap-launch.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="exemplo de gameplay" id="item4" class="grid-item">
+                <img src="https://www.gameinformer.com/sites/default/files/styles/thumbnail/public/2022/10/27/f220192c/marvel_snap_trailer_screenshot.png" alt="galactus em animações" id="item5" class="grid-item">
+            </div>
+        </section>
     </main>
     <!--fim da pagina, footnote-->
     <footer>

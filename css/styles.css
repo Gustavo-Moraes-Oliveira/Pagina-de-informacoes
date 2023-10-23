@@ -1,47 +1,194 @@
-*{box-sizing: border-box; margin: 0;padding: 0%;}
-body{background-color:midnightblue;}
-
-header{width: 100%;padding: 0%;
+/*Definicoes gerais da pagina*/
+*{
+    box-sizing: border-box; 
+    margin: 0;
+}
+body{
+    background-color: #6067f694;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+p {
+    font-size: 25px;
+}
+h1{
+    font-size: xx-large;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+/*Definicoes header*/
+header{
+    width: 100%;
+    padding: 0%;
     margin: 0%;
     object-fit:cover;
     border: 0;
-    box-sizing:content-box;
-    max-height: 250px;}
+    height: 250px;
+}
 
-.cabecalho{width: 100%;
+header img{
+    width: 100%;
     padding: 0%;
     margin: 0%;
     object-fit: cover;
     max-height: 250px;
-    margin-bottom: 0%;}
+    margin-bottom: 0;
+}
+/*Definicoes menu*/
+.menu{
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: #241883;
+    flex-wrap: wrap;
 
-.menu{position: sticky;
-    top: 0%; 
-    background-color: aqua;
+}
+.menu ul{
+    list-style-type: none;
     padding: 0;
+    font-size: 30px;
+    overflow: visible hidden;
+}
+
+.menu ul li{
+    display: inline;
+    border-top: 0;
+}
+
+.menu ul li a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline;
     text-decoration: none;
-    margin-top: 0%;
+    color: white;
+    padding-right: 20px;
+    min-width: 33%;
+}
+
+.menu ul li a:hover{
+    color: lightblue;
+}
+/*Definicoes corpo da pagina*/
+.regras-dicas{
+    display: flex;
+    flex-direction: row;
+}
+.primario{
+    width: 800%;
+    margin: 10px;
+    text-align: justify;
+}
+
+.secundario{
+    text-align: justify;
+    padding-right: 10px;
+}
+.titulos-primario{
+    display: flex;
+}
+.titulos-secundario{
+    display: flex;
+}
+.divisoria{
+    height: auto;
+    width: 2px;
+    border: 1.5px solid white;
+    margin: 10px;
+}
+/*Definicoes das imagens do corpo da pagina*/
+.float-images{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    float:inline-end;
+}
+.cards-images{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+/*Definicoes do grid de fotos*/
+.grid{
+    height: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas: "aranha animais"
+                "galactus vazio"
+                " venom locais";
+}
+
+#item1{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 0;
+    padding: 0%;
+    grid-area: "locais";
+}
+#item2{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 0;
+    padding: 0%;
+    grid-area: "aranha";
+}
+#item3{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 0;
+    padding: 0%;
+    grid-area: "animais";
+}
+#item4{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 0;
+    padding: 0%;
+    grid-area: "venom";
+}
+
+#item5{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 0;
+    padding: 0%;
+    grid-area: "galactus";}
+
+
+/*Definicoes para mobile*/
+@media (max-width: 480px){
+    .header{
+        height: 200px;
+        border: 0;}
+
+    .header img{
+        border: 0;}
+
+    .menu{
+        background-color: red;
+        flex-direction: column;
+        height: 120px;
+        position: relative;
     }
-
-.menu-itens{display: flex;
-            justify-content: space-evenly;
-            display: inline-block;
-            text-decoration: none;
-            border: 1px solid black;
-            }
-
-.primario{border:1px solid black; margin: 0;padding: 0%;}
-
-.secundario{border: 1px solid black; padding: 0;}
-
-
-
-
-.regras-dicas{display: flex;}
-
-@media(max-width: 480px){
-    .menu{background-color: darkgreen;position: static;}
-    .menu-itens{display: flex;}
-    .regras-dicas{display: flex;flex-wrap: wrap;}
-    .cabecalho{max-height: 150px;object-fit: cover;}
+    .menu ul li {display: block;}
+    .regras-dicas{
+        display: flex;
+        flex-direction: column;
+    }
+    .regras-dicas{
+        text-align: justify;
+    }
+    .primario{
+        width: 90%;
+    }
+    .divisoria{width: 100%;}
 }

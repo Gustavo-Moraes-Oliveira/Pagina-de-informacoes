@@ -1,25 +1,29 @@
 /*Definicoes gerais da pagina*/
 *{
-    box-sizing: border-box; 
-    margin: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: #6067f694;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    margin: 0;
 }
 p {
     font-size: 25px;
+    font-family: arial;
 }
 h1{
-    font-size: xx-large;
+    font-size: 50px;
     text-align: center;
+    margin: 0 auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 h2{
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /*Definicoes header*/
-header{
+    header{
     width: 100%;
     padding: 0%;
     margin: 0%;
@@ -42,21 +46,27 @@ header img{
     position: sticky;
     top: 0;
     width: 100%;
-    justify-content: flex-end;
-    background-color: #241883;
+    justify-content: flex-start;
+    background-color: #35289a;
     flex-wrap: wrap;
-
 }
 .menu ul{
+    display: flex;
     list-style-type: none;
-    padding: 0;
     font-size: 30px;
     overflow: visible hidden;
+    margin: 3px 0;
+    padding: 16px;
+    
 }
 
 .menu ul li{
     display: inline;
-    border-top: 0;
+    border: 1px solid white;
+    border-radius: 16px;
+    padding: 12px;
+    margin: 0 12px;
+    background-color: rgb(34, 5, 74);
 }
 
 .menu ul li a{
@@ -80,11 +90,18 @@ header img{
     width: 800%;
     margin: 10px;
     text-align: justify;
+    border-radius: 20px;
+    padding: 12px;
+    background-color: aqua;
 }
 
 .secundario{
     text-align: justify;
     padding-right: 10px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 12px;
+    margin:10px
 }
 .titulos-primario{
     display: flex;
@@ -92,94 +109,106 @@ header img{
 .titulos-secundario{
     display: flex;
 }
-.divisoria{
-    height: auto;
-    width: 2px;
-    border: 1.5px solid white;
-    margin: 10px;
-}
+
 /*Definicoes das imagens do corpo da pagina*/
 .float-images{
-    height: 150px;
     width: 150px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     float:inline-end;
 }
 .cards-images{
-    width: 150px;
-    height: 200px;
+    aspect-ratio: 3/4;
     object-fit: cover;
+    width: 150px;
+}
+.texto-secundario img{
+    height: 250px;
+    margin:12px;
 }
 /*Definicoes do grid de fotos*/
-.grid{
-    height: 90%;
-    width: 90%;
+.container{
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 300px 300px 300px;
-    grid-template-areas: "aranha animais"
-                "galactus vazio"
-                " venom locais";
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: .5rem;
+    margin: 1rem;
+    background-color: rgb(16, 16, 49);
+    border-radius: 1rem;
+    padding: 12px;
+    max-width: 100%;
 }
 
-#item1{
-    height: 300px;
-    width: 300px;
+.grid-item{
+    max-width: 100%;
+    aspect-ratio: 3/4;
     object-fit: cover;
-    border: 0;
-    padding: 0%;
-    grid-area: "locais";
+    align-self: center;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0/.1);
 }
-#item2{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border: 0;
-    padding: 0%;
-    grid-area: "aranha";
+.footer p{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 100px;
 }
-#item3{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border: 0;
-    padding: 0%;
-    grid-area: "animais";
-}
-#item4{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border: 0;
-    padding: 0%;
-    grid-area: "venom";
-}
-
-#item5{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border: 0;
-    padding: 0%;
-    grid-area: "galactus";}
-
 
 /*Definicoes para mobile*/
-@media (max-width: 480px){
+
+@media all and (max-width: 480px){
+
     .header{
-        height: 200px;
-        border: 0;}
+        height: 15em;
+        width: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;}
 
     .header img{
-        border: 0;}
+        border: 0;
+        min-height: 10rem;}
 
+    /*menu mobile*/
     .menu{
-        background-color: red;
-        flex-direction: column;
-        height: 120px;
-        position: relative;
+        display: flex;
+        position: static;
+        top: 0;
+        width: 100%;
+        justify-content: flex-start;
+        background-color: #35289a;
     }
-    .menu ul li {display: block;}
+    .menu ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        list-style-type: none;
+        font-size: 30px;
+        overflow: visible hidden;
+        margin: 3px 0;
+        padding: 16px;
+        
+    }
+    
+    .menu ul li{
+        border: 1px solid white;
+        border-radius: 16px;
+        padding: 8px;
+        margin: 12px 0;
+        background-color: rgb(34, 5, 74);
+    }
+    
+    .menu ul li a{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: inline;
+        text-decoration: none;
+        color: white;
+        padding-right: 20px;
+        min-width: 33%;
+    }
+    
+    .menu ul li a:hover{
+        color: lightblue;
+    }
+    /*corpo com conteudo primario e secundario*/
     .regras-dicas{
         display: flex;
         flex-direction: column;
@@ -188,7 +217,21 @@ header img{
         text-align: justify;
     }
     .primario{
-        width: 90%;
+        max-width: 90%;
+    }
+    .secundario{
+        max-width: 90%;
     }
     .divisoria{width: 100%;}
+    /*grid mobile*/
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: .25rem;
+        margin: 1rem;
+        border: 2px solid blue;
+        border-radius: 1rem;
+        padding: 12px;
+        max-width: 90%;
+    }
 }
